@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,12 +33,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String usua = ((EditText) findViewById(R.id.editText)).getText().toString();
         String contra = ((EditText) findViewById(R.id.editText2)).getText().toString();
 
-        if (usua.equals("lfgananrodriguezg@uniremingtonmanizales.edu.co") && contra.equals("leonardito")) {
+        if (usua.equals("lfgananr") && contra.equals("leonardito"))
+        {
 
 
             Intent intent = new Intent(this,Main2Activity.class);
             startActivity(intent);
         }
+
+        Toast.makeText(getApplicationContext(),"",Toast.LENGTH_LONG).show();
+        return;
 
     }
 
