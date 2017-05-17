@@ -40,9 +40,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(this,Main2Activity.class);
             startActivity(intent);
         }
-
+        else {
         Toast.makeText(getApplicationContext(),"incorrecto",Toast.LENGTH_LONG).show();
         return;
+        }
 
     }
 
