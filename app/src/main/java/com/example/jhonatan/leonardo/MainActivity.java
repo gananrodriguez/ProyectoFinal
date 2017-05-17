@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(intent);
         }
 
-        Toast.makeText(getApplicationContext(),"",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"incorrecto",Toast.LENGTH_LONG).show();
         return;
 
     }
