@@ -15,6 +15,9 @@ public class Main2Activity extends AppCompatActivity {
 
     Spinner spinner1;
     Spinner spinner2;
+    Spinner spinner3;
+
+    Spinner spinner4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +63,7 @@ public class Main2Activity extends AppCompatActivity {
         spinnerdos.add ("pre-inscripcion");
         spinnerdos.add ("documentos nuevos");
 
-        ArrayAdapter dos  = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line);
+        ArrayAdapter dos  = new ArrayAdapter(this,android.R.layout.simple_dropdown_item_1line,spinnerdos);
         dos.setDropDownViewResource(android.R.layout.simple_spinner_item);
         spinner2.setAdapter(dos);
         spinner2.setOnItemSelectedListener (new AdapterView.OnItemSelectedListener() {
@@ -79,6 +82,70 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        spinner3 = (Spinner)findViewById(R.id.spinner3);
+        List spinnertres = new ArrayList();
+
+        spinnertres.add ("Estudiantes");
+        spinnertres.add ("Calendario academico");
+        spinnertres.add ("Tarifas institucionales 2017");
+        spinnertres.add("Plataforma Moodle");
+        spinnertres.add("Plataforma Q10");
+        spinnertres.add("Correo institucional");
+        spinnertres.add("Recibo de matricula");
+        spinnertres.add("Homologaciones");
+        spinnertres.add("Directorio administrativo");
+        spinnertres.add("Lineamientos academicos");
+        spinnertres.add("Reglamento estudiantil");
+
+        ArrayAdapter tres = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, spinnertres);
+
+        tres.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        spinner3.setAdapter(tres);
+
+
+        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+        spinner4 = (Spinner)findViewById(R.id.spinner4);
+
+        List spinnercuatro = new ArrayList();
+
+        spinnercuatro.add ("Docentes -  tutores");
+        spinnercuatro.add ("Plataforma Moodle");
+        spinnercuatro.add ("Plataforma Q10");
+        spinnercuatro.add("Calendario academico");
+        spinnercuatro.add("Correo Institucional");
+        spinnercuatro.add("Directorio administrativo");
+        spinnercuatro.add("Reserva de equipos");
+
+        ArrayAdapter cuatro = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line,spinnercuatro);
+        cuatro.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        spinner4.setAdapter(cuatro);
+
+        spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
 
 
