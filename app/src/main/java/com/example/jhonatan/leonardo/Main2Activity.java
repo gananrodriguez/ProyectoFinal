@@ -18,6 +18,8 @@ public class Main2Activity extends AppCompatActivity {
     Spinner spinner3;
 
     Spinner spinner4;
+    Spinner spinner5;
+    Spinner spinner6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,7 +140,7 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                
+
             }
 
             @Override
@@ -147,8 +149,55 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+        spinner5 = (Spinner) findViewById(R.id.spinner5);
 
+        List spinnercinco = new ArrayList();
 
+        spinnercinco.add("Egresados");
+        spinnercinco.add("Epecializaciones");
+        spinnercinco.add("Correo institucional");
+        spinnercinco.add("Directorio administrativo");
+
+        ArrayAdapter cinco= new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, spinnercinco);
+        cinco.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        spinner5.setAdapter(cinco);
+        spinner5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+    spinner6 = (Spinner) findViewById(R.id.spinner6);
+        List spinnerseis = new ArrayList();
+        spinnerseis.add("Administrativos");
+        spinnerseis.add("Plataforma Q10");
+        spinnerseis.add("Correo institucional");
+        spinnerseis.add("Directorio administrativo");
+        spinnerseis.add("Reserva de equipos");
+
+        ArrayAdapter seis  = new ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, spinnerseis);
+        seis.setDropDownViewResource(android.R.layout.simple_spinner_item);
+
+        spinner6.setAdapter(seis);
+
+        spinner6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
 // ON
 
