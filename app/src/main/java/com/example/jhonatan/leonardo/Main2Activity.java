@@ -190,7 +190,7 @@ public class Main2Activity extends AppCompatActivity {
         spinner6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                
+
             }
 
             @Override
